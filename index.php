@@ -9,6 +9,20 @@
 
 <body>
     <h1>Test</h1>
+    <div>
+        test cases
+        <button onclick="window.location.href = '/ecom/view/admin_login.php';">admin login</button>
+    </div>
 </body>
 
 </html>
+
+<?php
+session_start();
+if (isset($_SESSION['admin_id'])) {
+    header('location:admin_home.php');
+} else {
+    header('
+    location:admin_login.php');
+}
+?>
