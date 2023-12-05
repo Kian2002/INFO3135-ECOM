@@ -1,4 +1,3 @@
-<!-- admin login page/ view -->
 <!DOCTYPE html>
 <html lang="en">
 

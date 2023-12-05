@@ -1,6 +1,7 @@
 <?php
 
 include '../model/admin_model.php';
+include '../model/product_model.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the input values
@@ -23,6 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     logoutAdmin();
     // Redirect to the login page
     header("Location: ../view/admin_login.php");
+    exit();
+} else if (isset($_GET['delete_product'])) {
+    // Delete the product
+    $id = $_GET['id'];
+    deleteProduct($id);
+    // Redirect to the edit product page
+    header("Location: ../view/edit_product.php");
     exit();
 } else {
     // Redirect to the login page

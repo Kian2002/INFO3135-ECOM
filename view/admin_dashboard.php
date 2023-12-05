@@ -12,9 +12,7 @@
     <div>
         <button onclick="window.location.href = '/ecom/view/add_product.php';">Add new Product</button>
         <button onclick="window.location.href = '/ecom/view/search_order.php';">Search order info</button>
-        <button onclick="window.location.href = '/ecom/view/remove_product.php';">Remove a product</button>
-        <button onclick="window.location.href = '/ecom/view/update_inventory.php';">Update inventory
-            system</button>
+        <button onclick="window.location.href = '/ecom/view/edit_product.php';">Update products</button>
     </div>
     <div>
         <button

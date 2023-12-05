@@ -1,4 +1,5 @@
 <?php
+require_once "../model/database_connect.php";
 function authenticateAdmin($email, $password)
 {
     global $conn;
