@@ -10,13 +10,13 @@
 <body>
     <h1>Admin Dashboard</h1>
     <div>
-        <button onclick="window.location.href = '/ecom/view/add_product.php';">Add new Product</button>
-        <button onclick="window.location.href = '/ecom/view/search_order.php';">Search order info</button>
-        <button onclick="window.location.href = '/ecom/view/edit_product.php';">Update products</button>
+        <button onclick="window.location.href = '../view/add_product.php';">Add new Product</button>
+        <button onclick="window.location.href = '../view/search_order.php';">Search order info</button>
+        <button onclick="window.location.href = '../view/edit_product.php';">Update products</button>
     </div>
     <div>
         <button
-            onclick="window.location.href = '/ecom/controller/admin_controller.php?admin_logout=true';">Logout</button>
+            onclick="window.location.href = '../controller/admin_controller.php?admin_logout=true';">Logout</button>
     </div>
 </body>
 

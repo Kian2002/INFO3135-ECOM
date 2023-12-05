@@ -36,8 +36,8 @@
                 echo "<td>" . $row['product_description'] . "</td>";
                 echo "<td>" . $row['image_path'] . "</td>";
                 echo "<td>" . $row['product_price'] . "</td>";
-                echo "<td><a href='/ecom/view/update_product.php?id=" . $row['product_id'] . "'>Update</a></td>";
-                echo "<td><a href='/ecom/controller/admin_controller.php?delete_product=true&id=" . $row['product_id'] . "'>Delete</a></td>";
+                echo "<td><a href='../view/update_product.php?id=" . $row['product_id'] . "'>Update</a></td>";
+                echo "<td><a href='../controller/admin_controller.php?delete_product=true&id=" . $row['product_id'] . "'>Delete</a></td>";
                 echo "</tr>";
             }
 
@@ -47,7 +47,7 @@
         }
         ?>
 
-        <button onclick="window.location.href = '/ecom/view/admin_dashboard.php';">Back to Admin Dashboard</button>
+        <button onclick="window.location.href = '../view/admin_dashboard.php';">Back to Admin Dashboard</button>
 
     </div>
 </body>

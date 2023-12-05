@@ -23,7 +23,7 @@
     </form>
 
     <div>
-        <button onclick="window.location.href = '/ecom/view/admin_dashboard.php';">Back to dashboard</button>
+        <button onclick="window.location.href = '../view/admin_dashboard.php';">Back to dashboard</button>
     </div>
 
 </body>

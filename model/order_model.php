@@ -16,5 +16,35 @@ function searchOrder($search)
 
     return $conn->query($query);
 }
+function insertOrder($orderID, $customerID, $currentDate)
+{
+    // global $conn;
 
+    // // SQL query to insert order details without total_amount
+    // $query= "INSERT INTO orders (order_id, customer_id, order_date) VALUES ('55', '11', '$currentDate')";
+
+    // return $conn->query($query);
+
+    global $conn;
+
+    $name = $conn->real_escape_string($orderID);
+    $description = $conn->real_escape_string($customerID);
+    $imagePath = $conn->real_escape_string($currentDate);
+
+    // Insert product into the database
+    $query = "INSERT INTO `orders`(`order_id`, `customer_id`, `order_date`) VALUES ('$orderID','$customerID','$currentDate')";
+
+    return $conn->query($query);
+}
+
+
+function insertOrderProduct($orderID, $productID, $quantity, $price) {
+    global $conn;
+
+    // SQL query to insert order product details
+    $sql = "INSERT INTO order_products (order_id, product_id, quantity, price) VALUES ('$orderID', '$productID', '$quantity', '$price')";
+
+    // Execute the query
+    return $conn->query($sql);
+}
 ?>

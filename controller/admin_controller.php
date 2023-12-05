@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Authenticate the admin
     if (authenticateAdmin($email, $password)) {
         // Authentication successful, redirect to the admin dashboard or perform further actions
-        header("Location: /ecom/view/admin_dashboard.php");
+        header("Location: ../view/admin_dashboard.php");
         exit();
     } else {
         // Authentication failed, redirect back to the login page with an error message

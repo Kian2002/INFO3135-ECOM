@@ -11,7 +11,8 @@
     <h1>Test</h1>
     <div>
         test cases
-        <button onclick="window.location.href = '/ecom/view/admin_login.php';">admin login</button>
+        <button onclick="window.location.href = 'view/admin_login.php';">admin login</button>
+        <button onclick="window.location.href = 'view/cust_login.php';">customer login</button>
     </div>
 </body>
 

@@ -16,7 +16,7 @@
         $product = getProductById($id);
         $row = $product->fetch_assoc();
         ?>
-        <form action="/ecom/controller/admin_controller.php" method="POST">
+        <form action="../controller/admin_controller.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $row['product_id']; ?>">
             <label for="product_name">Product Name</label>
             <input type="text" name="product_name" id="product_name" value="<?php echo $row['product_name']; ?>">
