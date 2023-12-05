@@ -1,5 +1,4 @@
 <?php
-// Start the session
 session_start();
 ?>
 
@@ -77,7 +76,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 <th>Action</th>
             </tr>";
 
-    $totalSubtotal = 0; // Initialize total subtotal
+    $totalSubtotal = 0; 
 
     foreach ($_SESSION['cart'] as $product) {
         echo "<tr>";
@@ -86,28 +85,24 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         echo "<td>$ {$product['price']}</td>";
         echo "<td>{$product['quantity']}</td>";
 
-        // Calculate and display the total for this product
+    
         $productTotal = $product['price'] * $product['quantity'];
-        echo "<td>{$productTotal}</td>";
+        echo "<td>$ {$productTotal}</td>";
 
-        // Display the image if the image path is available
+        
         if (!empty($product['image_path'])) {
             echo "<td><img src='{$product['image_path']}' alt='Product Image'></td>";
         } else {
             echo "<td>No Image</td>";
         }
-
-        // Link to the cart_controller.php file for removing the product
         echo "<td><a href='../controller/cart_controller.php?action=remove&id={$product['id']}'>Remove</a></td>";
         echo "</tr>";
-
-        // Accumulate subtotal
         $totalSubtotal += $productTotal;
     }
 
     echo "</table>";
 
-    // Display the total subtotal
+
     echo "<p>Total: $ {$totalSubtotal}</p>";
 
     echo "<button onclick=\"window.location.href = '../view/cust_dashboard.php';\">Home</button>";
@@ -118,6 +113,5 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     echo "<button onclick=\"window.location.href = '../view/cust_dashboard.php';\">Home</button>";
 }
 ?>
-
 </body>
 </html>

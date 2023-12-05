@@ -65,7 +65,7 @@
         button {
             padding: 10px;
             font-size: 16px;
-            margin-top: 10px; /* Adjusted margin */
+            margin-top: 10px;
             cursor: pointer;
             background-color: #3498db;
             color: #fff;

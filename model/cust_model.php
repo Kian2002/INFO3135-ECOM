@@ -11,10 +11,8 @@ function authenticateCust($email, $password)
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
-        // Admin is authenticated
         return true;
     } else {
-        // Admin authentication failed
         return false;
     }
 }
