@@ -9,14 +9,13 @@ session_start();
 require_once('../model/order_model.php');
 
 function addToCart($id, $name, $price, $image_path) {
-    // Initialize quantity to 1 when adding a new product
+    
     $product = [
         'id' => $id,
         'name' => $name,
         'price' => $price,
         'quantity' => 1,
         'image_path' => $image_path,
-        // Add more details as needed
     ];
 
     // Check if the cart array exists in the session
@@ -34,6 +33,8 @@ function addToCart($id, $name, $price, $image_path) {
         // If the product is not in the cart, add it
         $_SESSION['cart'][] = $product;
     }
+    header("Location: ../view/cust_dashboard.php");
+    exit();
 }
 
 

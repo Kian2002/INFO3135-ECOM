@@ -5,6 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+        div {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +83,7 @@
 
                 // Display the image if the image path is available
                 if (!empty($row['image_path'])) {
-                    echo "<td><img src='{$row['image_path']}' alt='Product Image' style='width: 50px; height: 50px;'></td>";
+                    echo "<td><img src='{$row['image_path']}' alt='Product Image'></td>";
                 } else {
                     echo "<td>No Image</td>";
                 }
@@ -50,17 +100,17 @@
         }
         ?>
 
-        <button onclick="window.location.href = '../view/cust_dashboard.php';">Home</button>
+
     </div>
 
     <div>
-        <button onclick="window.location.href = '../view/view_products.php';">View Product</button>
+    <button onclick="window.location.href = '../view/cust_dashboard.php';">Home</button>
         <button onclick="window.location.href = '../view/cart.php';">View Cart</button>
-        <button onclick="window.location.href = '../view/edit_product.php';">Update products</button>
+        <button onclick="window.location.href = '../controller/cust_controller.php?cust_logout=true';">Logout</button>
     </div>
 
     <div>
-        <button onclick="window.location.href = '../controller/cust_controller.php?cust_logout=true';">Logout</button>
+     
     </div>
 </body>
 
