@@ -5,11 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .form-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .back-button-div {
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
+    <div class="back-button-div">
+        <button onclick="window.location.href = '/ecom/view/edit_product.php';">Back to Edit Products</button>
+    </div>
+
     <h1>Update product</h1>
-    <div>
+
+    <div class="form-div">
         <?php
         require_once('../model/product_model.php');
         $id = $_GET['id'];
@@ -37,7 +85,6 @@
             <br>
             <input type="submit" value="Update">
         </form>
-        <button onclick="window.location.href = '/ecom/view/edit_product.php';">Back to Edit Products</button>
     </div>
 
 </body>

@@ -5,9 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Products (update inventory/delete)</title>
+
+    <style>
+        .back-button-div {
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #4caf50;
+        }
+
+        tr:nth-child(even) {
+            background-color: #a7a9aa;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="back-button-div">
+        <button onclick="window.location.href = '../view/admin_dashboard.php';">Back to dashboard</button>
+    </div>
+
     <h1>Edit Products</h1>
 
     <div>
@@ -46,9 +106,6 @@
             echo "No products found";
         }
         ?>
-
-        <button onclick="window.location.href = '../view/admin_dashboard.php';">Back to Admin Dashboard</button>
-
     </div>
 </body>
 
